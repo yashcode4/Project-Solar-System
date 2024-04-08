@@ -233,3 +233,20 @@ body {
     transform-origin: 0% 50%;
 }
 
+
+/* PLUTO */
+#plutoOrbit {
+    top: calc(50% - 500px);
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 1000px;
+    overflow: visible;
+    /* To shift the pluto orbit to the left */
+    transform: translate(-10%, 0%);
+}
+
+#pluto img {
+    width: 10px;
+    height: 10px;
+    transform-origin: 0% 50%;
+}

@@ -9,6 +9,7 @@ const jupiter = document.getElementById('jupiter');
 const saturn = document.getElementById('saturn');
 const uranus = document.getElementById('uranus');
 const neptune = document.getElementById('neptune');
+const pluto = document.getElementById('pluto');
 
 // Initialize angles for Planets
 let angleMercury = 0;
@@ -20,6 +21,7 @@ let angleJupiter = 0;
 let angleSaturn = 0;
 let angleUranus = 0;
 let angleNeptune = 0;
+let anglePluto = 0;
 
 // Function to animate the movement of planets
 function animate() {
@@ -33,6 +35,7 @@ function animate() {
     angleSaturn += 0.008 * 10;
     angleUranus += 0.003 * 10;
     angleNeptune += 0.001 * 10;
+    anglePluto += 0.01 * 10;
     
 
     // Apply CSS to rotate and position the planets
@@ -45,6 +48,7 @@ function animate() {
     saturn.style.transform = `translate(-50%, -50%) rotate(${angleSaturn}deg) translate(285px)`;
     uranus.style.transform = `translate(-50%, -50%) rotate(${angleUranus}deg) translate(350px)`;
     neptune.style.transform = `translate(-50%, -50%) rotate(${angleNeptune}deg) translate(400px)`;
+    pluto.style.transform = `translate(-50%, -50%) rotate(${anglePluto}deg) translate(500px)`;
 
     // Set timeout for 20ms for the next animation
     setTimeout(animate, 20);
@@ -55,4 +59,5 @@ function animate() {
 
 // Start the animation
 animate();
+
 

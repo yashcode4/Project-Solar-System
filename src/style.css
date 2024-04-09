@@ -19,6 +19,7 @@
 
 body {
     overflow: hidden;
+    cursor: grab;
 }
 
 .heading {
@@ -29,6 +30,7 @@ body {
     width: 17vw;
     border: 0.1vw dashed #666666;
     background: black;
+    position: fixed;
 }
 
 .heading p {

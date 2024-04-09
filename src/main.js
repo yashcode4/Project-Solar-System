@@ -61,3 +61,37 @@ function animate() {
 animate();
 
 
+// Hand Cursor Function
+const body = document.querySelector('body');
+
+let isDragging = false;
+let startPositionX = 0;
+let startPositionY = 0;
+
+body.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startPositionX = e.clientX;
+  startPositionY = e.clientY;
+  document.body.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+
+  const deltaX = e.clientX - startPositionX;
+  const deltaY = e.clientY - startPositionY;
+
+  // Adjust scroll based on the mouse movement
+  window.scrollBy(-deltaX, -deltaY);
+
+  // Update start positions for next movement
+  startPositionX = e.clientX;
+  startPositionY = e.clientY;
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  document.body.style.cursor = 'grab';
+});
+
+
